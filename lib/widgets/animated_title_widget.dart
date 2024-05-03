@@ -15,36 +15,39 @@ class AnimatedTitleWidget extends StatelessWidget {
           "Olá, meu nome é ",
           style: theme.textTheme.bodyLarge?.copyWith(
             color: Colors.white,
-            fontSize: 28.sp,
+            fontSize: 52.sp,
             fontWeight: FontWeight.w400,
           ),
         ),
 
-        AnimatedTextKit(
-          pause:  const Duration(milliseconds: 5000),
-          repeatForever: true,
-          animatedTexts: [
-            TypewriterAnimatedText(
-              "Thiago Sousa",
-              textStyle: GoogleFonts.jetBrainsMono(
-                fontSize: 34.sp,
-                fontWeight: FontWeight.w700,
-                color: theme.colorScheme.primary,
+        Padding(
+          padding: EdgeInsets.only(left: 50.w),
+          child: AnimatedTextKit(
+            pause:  const Duration(milliseconds: 5000),
+            repeatForever: true,
+            animatedTexts: [
+              TypewriterAnimatedText(
+                "Thiago Sousa",
+                textStyle: GoogleFonts.jetBrainsMono(
+                  fontSize: 57.sp,
+                  fontWeight: FontWeight.w700,
+                  color: theme.colorScheme.primary,
+                ),
+                speed: const Duration(milliseconds: 100),
               ),
-              speed: const Duration(milliseconds: 100),
-            ),
 
-            TypewriterAnimatedText(
-              "thiagoodev",
-              textStyle: GoogleFonts.jetBrainsMono(
-                fontSize: 34.sp,
-                fontWeight: FontWeight.w700,
-                color: theme.colorScheme.primary,
+              TypewriterAnimatedText(
+                "thiagoodev",
+                textStyle: GoogleFonts.jetBrainsMono(
+                  fontSize: 57.sp,
+                  fontWeight: FontWeight.w700,
+                  color: theme.colorScheme.primary,
+                ),
+                cursor: "🔥",
+                speed: const Duration(milliseconds: 100),
               ),
-              cursor: "🔥",
-              speed: const Duration(milliseconds: 100),
-            ),
-          ],
+            ],
+          ),
         ),
       ],
     );
